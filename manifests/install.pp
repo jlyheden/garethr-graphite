@@ -17,12 +17,12 @@ class graphite::install {
   }
 
   exec { 'install-carbon':
-    command => 'pip install carbon',
+    command => '/usr/bin/env pip install carbon',
     creates => '/opt/graphite/lib/carbon',
   }
 
   exec { 'install-graphite-web':
-    command => 'pip install graphite-web',
+    command => '/usr/bin/env pip install graphite-web',
     creates => '/opt/graphite/webapp/graphite',
   }
 
